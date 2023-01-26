@@ -45,4 +45,4 @@ Execute `npm run cy:open:tablet` para abrir o Cypress Test Runner e executar os 
 
 ___
 
-Made with ❤️ by Line Sineiro (https://github.com/allinesineiro).
+Made with ❤️ by [Line Sineiro](https://github.com/allinesineiro).
