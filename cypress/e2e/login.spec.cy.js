@@ -1,3 +1,5 @@
+/// <reference path="../support/commands.d.ts" />
+
 it('Realiza login com sucesso', () => {
   cy.intercept('GET', '**/notes').as('getNotes'),
   cy.login(

@@ -1,3 +1,5 @@
+/// <reference path="../support/commands.d.ts" />
+
 it('inscreve-se com sucesso usando código de confirmação enviado por email', () => {
   const faker = require('faker')
   const emailAddress = `${faker.datatype.uuid()}@${Cypress.env('MAILOSAUR_SERVER_ID')}.mailosaur.net`

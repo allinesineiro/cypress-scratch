@@ -1,7 +1,7 @@
 {
   "name": "cypress",
   "version": "1.0.0",
-  "description": "",
+  "description": "Um exemplo para demonstrar testes end to end escritos com Cypress e integração contínua com GitHub Actions",
   "main": "index.js",
   "scripts": {
     "lint": "eslint cypress/**/*.js",
