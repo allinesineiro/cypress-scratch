@@ -24,7 +24,8 @@ Antes de rodar os testes, algumas variáveis de ambiente precisarão ser setadas
 Faça uma cópia do arquivo [`cypress.env.example.json`](./cypress.env.example.json) como `cypress.env.json`, e sete os valores apropriados para todas as variáveis.
 
 **Note:** `cypress.env.json` é um arquivo que será ignorado pelo git.
-**Note:** Usando a versão trial do [Mailosaur](https://mailosaur.com/)
+
+**Note:** Usando a versão trial do [Mailosaur](https://mailosaur.com/).
 
 ## Executando os testes
 
