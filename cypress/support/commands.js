@@ -1,3 +1,4 @@
+// faz cadastro
 Cypress.Commands.add('inscreverSe', (email, password) => {
   cy.visit('/signup')
   cy.get('#email').type(email)
@@ -7,6 +8,7 @@ Cypress.Commands.add('inscreverSe', (email, password) => {
   cy.get('#confirmationCode').should('be.visible')
 })
 
+// faz login
 Cypress.Commands.add('login', (
   username = Cypress.env('USER_EMAIL'),
   password = Cypress.env('USER_PASSWORD'),
@@ -27,8 +29,10 @@ Cypress.Commands.add('login', (
   }
 })
 
+// faz upload de arquivo
 const attachFileHandler = () => cy.get('#file').attachFile('example.json')
 
+// cria nota
 Cypress.Commands.add('createNote', (note, attachFile = false) => {
   cy.visit('/notes/new')
   cy.get('#content').type(note)
@@ -38,16 +42,14 @@ Cypress.Commands.add('createNote', (note, attachFile = false) => {
   }
 
   cy.contains('button', 'Create').click()
-
   cy.contains('.list-group-item', note).should('be.visible')
 })
 
+// edita nota
 Cypress.Commands.add('editNote', (note, newValue, attachFile = false) => {
   cy.intercept('GET', '**/notes/**').as('getNote')
-
   cy.contains('.list-group-item', note).click()
   cy.wait('@getNote')
-
   cy.get('#content')
     .clear()
     .type(newValue)
@@ -57,18 +59,18 @@ Cypress.Commands.add('editNote', (note, newValue, attachFile = false) => {
   }
 
   cy.contains('button', 'Save').click()
-
   cy.contains('.list-group-item', note).should('not.exist')
   cy.contains('.list-group-item', newValue).should('be.visible')
 })
 
+// exclui nota
 Cypress.Commands.add('deleteNote', note => {
   cy.contains('.list-group-item', note).click()
   cy.contains('button', 'Delete').click()
-
   cy.contains('.list-group-item', note).should('not.exist')
 })
 
+// preenche form cartão de crédito com iframe
 Cypress.Commands.add('fillSettingsFormAndSubmit', () => {
   cy.visit('/settings')
   cy.get('#storage').type('1')

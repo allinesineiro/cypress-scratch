@@ -10,6 +10,7 @@ module.exports = defineConfig({
       "viewportWidthBreakpoint": 768
     },
     projectId: "9agxqa",
+    theme: "Halloween "
     },
   },
 );
