@@ -24,7 +24,8 @@ Antes de rodar os testes, algumas variáveis de ambiente precisarão ser setadas
 Faça uma cópia do arquivo [`cypress.env.example.json`](./cypress.env.example.json) como `cypress.env.json`, e sete os valores apropriados para todas as variáveis.
 
 **Note:** `cypress.env.json` é um arquivo que será ignorado pelo git.
-**Note:** Usando a versão trial do [Mailosaur](https://mailosaur.com/)
+
+**Note:** Usando a versão trial do [Mailosaur](https://mailosaur.com/).
 
 ## Executando os testes
 
@@ -44,4 +45,4 @@ Execute `npm run cy:open:tablet` para abrir o Cypress Test Runner e executar os 
 
 ___
 
-Made with ❤️ by Line Sineiro (https://github.com/allinesineiro).
+Made with ❤️ by [Line Sineiro](https://github.com/allinesineiro). [![Cypress.io](https://img.shields.io/badge/tested%20with-Cypress-04C38E.svg)](https://www.cypress.io/)
